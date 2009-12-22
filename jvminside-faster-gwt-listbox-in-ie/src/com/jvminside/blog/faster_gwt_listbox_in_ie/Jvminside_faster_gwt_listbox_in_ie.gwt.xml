@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to='jvminside_faster_gwt_listbox_in_ie'>
+
+	<inherits name='com.google.gwt.user.User' />
+
+	<entry-point
+		class='com.jvminside.blog.faster_gwt_listbox_in_ie.client.Jvminside_faster_gwt_listbox_in_ie' />
+
+	<source path='client' />
+
+</module>
