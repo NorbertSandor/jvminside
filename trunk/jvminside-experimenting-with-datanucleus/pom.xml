@@ -71,7 +71,7 @@
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-core</artifactId>
-			<version>3.3.2.GA</version>
+			<version>3.5.0-Beta-2</version>
 			<exclusions>
 				<exclusion>
 					<groupId>org.slf4j</groupId>
@@ -82,7 +82,7 @@
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-annotations</artifactId>
-			<version>3.4.0.GA</version>
+			<version>3.5.0-Beta-2</version>
 			<exclusions>
 				<exclusion>
 					<groupId>org.slf4j</groupId>
@@ -93,7 +93,7 @@
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-entitymanager</artifactId>
-			<version>3.4.0.GA</version>
+			<version>3.5.0-Beta-2</version>
 			<exclusions>
 				<exclusion>
 					<groupId>org.hibernate</groupId>
@@ -107,7 +107,7 @@
 		<dependency>
 			<groupId>org.datanucleus</groupId>
 			<artifactId>datanucleus-core</artifactId>
-			<version>1.1.6</version>
+			<version>2.0.0-release</version>
 			<exclusions>
 				<exclusion>
 					<groupId>javax.transaction</groupId>
@@ -118,17 +118,17 @@
 		<dependency>
 			<groupId>org.datanucleus</groupId>
 			<artifactId>datanucleus-rdbms</artifactId>
-			<version>1.1.6</version>
+			<version>2.0.0-release</version>
 		</dependency>
 		<dependency>
 			<groupId>org.datanucleus</groupId>
 			<artifactId>datanucleus-jpa</artifactId>
-			<version>1.1.5</version>
+			<version>2.0.0-release</version>
 		</dependency>
 		<dependency>
 			<groupId>org.datanucleus</groupId>
 			<artifactId>datanucleus-enhancer</artifactId>
-			<version>1.1.4</version>
+			<version>2.0.0-release</version>
 		</dependency>
 		<dependency>
 			<groupId>javax.jdo</groupId>
@@ -141,6 +141,11 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
-
+		<dependency>
+			<groupId>org.apache.geronimo.specs</groupId>
+			<artifactId>geronimo-jpa_2.0_spec</artifactId>
+			<version>1.0-PFD2</version>
+		</dependency>
+		
 	</dependencies>
 </project>
