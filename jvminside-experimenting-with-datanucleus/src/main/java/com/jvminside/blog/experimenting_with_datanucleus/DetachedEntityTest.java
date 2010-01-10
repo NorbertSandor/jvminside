@@ -78,8 +78,15 @@ public class DetachedEntityTest extends JpaTestCase
             @Override
             public void run()
             {
+                Assert.assertEquals("The detached instance was probably persisted as a new instance: ", 1,
+                        ((Number) getEntityManager().createQuery("SELECT COUNT(p) FROM Parent p").getSingleResult())
+                                .intValue());
+
                 Parent parent = getEntityManager().find(Parent.class, 100);
-                Assert.assertEquals(originalVersion + 1, parent.getVersion());
+                Assert.assertEquals("Version number wasn't incremented as expected: ", originalVersion + 1, parent
+                        .getVersion());
+                Assert.assertEquals("Parent should have 2 children because one of them was removed: ", 2, parent
+                        .getChildren().size());
             }
         });
     }

@@ -6,7 +6,7 @@
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
 <listEntry value="1"/>
 </listAttribute>
-<stringAttribute key="org.eclipse.debug.ui.ATTR_CONSOLE_ENCODING" value="UTF-8"/>
+<stringAttribute key="org.eclipse.debug.ui.ATTR_CONSOLE_ENCODING" value="ISO-8859-1"/>
 <stringAttribute key="org.eclipse.jdt.junit.CONTAINER" value=""/>
 <booleanAttribute key="org.eclipse.jdt.junit.KEEPRUNNING_ATTR" value="false"/>
 <stringAttribute key="org.eclipse.jdt.junit.TESTNAME" value=""/>
@@ -15,5 +15,5 @@
 <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="com.jvminside.blog.experimenting_with_datanucleus.DetachedEntityTest"/>
 <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="jvminside-experimenting-with-datanucleus"/>
 <stringAttribute key="org.eclipse.jdt.launching.SOURCE_PATH_PROVIDER" value="org.maven.ide.eclipse.launchconfig.sourcepathProvider"/>
-<stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-DpersistenceProvider=datanucleus -javaagent:c:\Dev\m2repo\org\datanucleus\datanucleus-enhancer\1.1.4\datanucleus-enhancer-1.1.4.jar=com.jvminside.blog.experimenting_with_datanucleus"/>
+<stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-DpersistenceProvider=datanucleus -javaagent:c:\Dev\m2repo\org\datanucleus\datanucleus-enhancer\2.0.0-release\datanucleus-enhancer-2.0.0-release.jar=com.jvminside.blog.experimenting_with_datanucleus"/>
 </launchConfiguration>

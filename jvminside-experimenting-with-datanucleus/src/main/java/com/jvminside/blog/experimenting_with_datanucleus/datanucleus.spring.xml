@@ -41,7 +41,7 @@
 		<property name="properties">
 			<props>
 				<prop key="datanucleus.autoCreateSchema">true</prop>
-				<prop key="datanucleus.jpa.addClassTransformer">true</prop>
+				<prop key="datanucleus.jpa.addClassTransformer">false</prop>
 				<prop key="datanucleus.storeManagerType">rdbms</prop>
 			</props>
 		</property>
