@@ -1,25 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-   Copyright 2010 Norbert Sándor
-   
-   This code is free software: you can redistribute it and/or modify
-   it under the terms of the GNU General Public License as published by
-   the Free Software Foundation, either version 3 of the License, or
-   (at your option) any later version.
-    
-   This software is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-   GNU General Public License for more details.
-    
-   You should have received a copy of the GNU General Public License
-   along with Foobar.  If not, see <http://www.gnu.org/licenses/>.
--->
+	<!--
+		Copyright 2010 Norbert Sándor This code is free software: you can
+		redistribute it and/or modify it under the terms of the GNU General
+		Public License as published by the Free Software Foundation, either
+		version 3 of the License, or (at your option) any later version. This
+		software is distributed in the hope that it will be useful, but
+		WITHOUT ANY WARRANTY; without even the implied warranty of
+		MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+		General Public License for more details. You should have received a
+		copy of the GNU General Public License along with Foobar. If not, see
+		<http://www.gnu.org/licenses/>.
+	-->
 <persistence xmlns="http://java.sun.com/xml/ns/persistence"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd"
 	version="1.0">
 	<persistence-unit name="main" transaction-type="RESOURCE_LOCAL">
+		<class>com.jvminside.blog.experimenting_with_datanucleus.Parent</class>
+		<class>com.jvminside.blog.experimenting_with_datanucleus.Child</class>
+		<exclude-unlisted-classes>true</exclude-unlisted-classes>
+	</persistence-unit>
+	<persistence-unit name="forDatanucleusForum"
+		transaction-type="RESOURCE_LOCAL">
+		<provider>org.datanucleus.jpa.PersistenceProviderImpl</provider>
 		<class>com.jvminside.blog.experimenting_with_datanucleus.Parent</class>
 		<class>com.jvminside.blog.experimenting_with_datanucleus.Child</class>
 		<exclude-unlisted-classes>true</exclude-unlisted-classes>
