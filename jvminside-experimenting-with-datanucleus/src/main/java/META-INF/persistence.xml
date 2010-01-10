@@ -26,5 +26,14 @@
 		<class>com.jvminside.blog.experimenting_with_datanucleus.Parent</class>
 		<class>com.jvminside.blog.experimenting_with_datanucleus.Child</class>
 		<exclude-unlisted-classes>true</exclude-unlisted-classes>
+		<properties>
+			<property name="javax.persistence.jdbc.driver" value="org.hsqldb.jdbcDriver" />
+			<property name="javax.persistence.jdbc.url" value="jdbc:hsqldb:mem:db" />
+			<property name="javax.persistence.jdbc.user" value="sa" />
+			<property name="javax.persistence.jdbc.password" value="" />
+			<property name="datanucleus.autoCreateSchema" value="true" />
+			<property name="datanucleus.jpa.addClassTransformer" value="false" />
+			<property name="datanucleus.storeManagerType" value="rdbms" />
+		</properties>
 	</persistence-unit>
 </persistence>

@@ -1,8 +1,5 @@
 package com.jvminside.blog.experimenting_with_datanucleus;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
@@ -20,16 +17,7 @@ public class DetachedEntityTestForDatanucleusForum
 
     public static void main(String[] args)
     {
-        Map<String, String> props = new HashMap<String, String>();
-        props.put("javax.persistence.jdbc.driver", "org.hsqldb.jdbcDriver");
-        props.put("javax.persistence.jdbc.url", "jdbc:hsqldb:mem:db");
-        props.put("javax.persistence.jdbc.user", "sa");
-        props.put("javax.persistence.jdbc.password", "");
-        props.put("datanucleus.autoCreateSchema", "true");
-        props.put("datanucleus.jpa.addClassTransformer", "false");
-        props.put("datanucleus.storeManagerType", "rdbms");
-
-        emf = Persistence.createEntityManagerFactory("forDatanucleusForum", props);
+        emf = Persistence.createEntityManagerFactory("forDatanucleusForum", null);
 
         //
         // Populate database
