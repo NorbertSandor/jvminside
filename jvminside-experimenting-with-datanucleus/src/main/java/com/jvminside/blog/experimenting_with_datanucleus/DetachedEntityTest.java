@@ -56,7 +56,7 @@ public class DetachedEntityTest extends JpaTestCase
         detached[0].getChildren().remove(deleted);
 
         //
-        // Merge unmodified
+        // Merge modified
         //
 
         getPersistenceService().executeTransactionally(new Runnable()

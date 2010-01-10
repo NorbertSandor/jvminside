@@ -50,7 +50,7 @@ public class DetachedEntityTestForDatanucleusForum
         detached[0].getChildren().remove(deleted);
 
         //
-        // Merge unmodified
+        // Merge modified
         //
 
         executeTransactionally(new Runnable()
