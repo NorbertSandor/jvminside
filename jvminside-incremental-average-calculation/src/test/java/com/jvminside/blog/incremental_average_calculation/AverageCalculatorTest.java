@@ -1,3 +1,19 @@
+/*
+   Copyright 2010 Norbert Sándor
+   
+   This code is free software: you can redistribute it and/or modify
+   it under the terms of the GNU General Public License as published by
+   the Free Software Foundation, either version 3 of the License, or
+   (at your option) any later version.
+    
+   This software is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU General Public License for more details.
+    
+   You should have received a copy of the GNU General Public License
+   along with Foobar.  If not, see <http://www.gnu.org/licenses/>.
+ */
 package com.jvminside.blog.incremental_average_calculation;
 
 import java.util.Random;
@@ -13,6 +29,8 @@ public class AverageCalculatorTest
     private static final int NUMBER_COUNT = 10000;
 
     private static final int NUMBER_MAGNITUDE = 10000;
+
+    private static final double ACCEPTANCE_DELTA = 1e-10;
 
     @Test
     public void testWithDataset()
@@ -50,10 +68,20 @@ public class AverageCalculatorTest
         }
     }
 
+    @Test
+    public void testNumericalStabililty()
+    {
+        Assert.assertEquals(Double.MAX_VALUE / 4.0, AverageCalculator.incrementalAverage(Double.MAX_VALUE / 4.0,
+                Double.MAX_VALUE / 4.0, Double.MAX_VALUE / 4.0, Double.MAX_VALUE / 4.0, Double.MAX_VALUE / 4.0,
+                Double.MAX_VALUE / 4.0), ACCEPTANCE_DELTA);
+        Assert.assertEquals(Double.POSITIVE_INFINITY, AverageCalculator.average(Double.MAX_VALUE / 4.0,
+                Double.MAX_VALUE / 4.0, Double.MAX_VALUE / 4.0, Double.MAX_VALUE / 4.0, Double.MAX_VALUE / 4.0,
+                Double.MAX_VALUE / 4.0), ACCEPTANCE_DELTA);
+    }
+
     private void assertAveragesEqual(Double expectedResult, double... values)
     {
         double normalResult = AverageCalculator.average(values);
-        double simpleIncrementalResult = AverageCalculator.simpleIncrementalAverage(values);
         double incrementalResult = AverageCalculator.incrementalAverage(values);
 
         if (expectedResult != null)
@@ -61,7 +89,6 @@ public class AverageCalculatorTest
             Assert.assertEquals(expectedResult, normalResult);
         }
 
-        Assert.assertEquals(normalResult, simpleIncrementalResult, 1e-10);
-        Assert.assertEquals(normalResult, incrementalResult, 1e-10);
+        Assert.assertEquals(normalResult, incrementalResult, ACCEPTANCE_DELTA);
     }
 }

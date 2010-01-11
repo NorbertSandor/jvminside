@@ -1,0 +1,9 @@
+A_n=\frac{v_1+v_2+...+v_n}{n}=\frac{\sum_{i=1}^{n} v_i}{n}
+
+
+A_{n+1} & = & \frac{\sum_{i=1}^{n+1}v_i}{n+1} \nonumber \\
+& = & \frac{\sum_{i=1}^{n}v_i+v_{n+1}}{n+1} \nonumber \\
+& = & \frac{nA_n+v_{n+1}}{n+1} \nonumber \\
+& = & \frac{v_{n+1}+nA_n+A_n-A_n}{n+1} \nonumber \\
+& = & \frac{v_{n+1}+(n+1)A_n-A_n}{n+1} \nonumber \\
+& = & A_n+\frac{v_{n+1}-A_n}{n+1} \nonumber \\
