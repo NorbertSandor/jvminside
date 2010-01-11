@@ -22,7 +22,7 @@ public class AverageCalculator
     {
         if (values.length == 0)
         {
-            throw new IllegalArgumentException("Expected non-null and non-empty array of numbers.");
+            throw new IllegalArgumentException("Expected a non-empty array of numbers.");
         }
 
         double result = 0.0;
@@ -41,7 +41,7 @@ public class AverageCalculator
     {
         if (values.length == 0)
         {
-            throw new IllegalArgumentException("Expected non-null and non-empty array of numbers.");
+            throw new IllegalArgumentException("Expected a non-empty array of numbers.");
         }
 
         double result = 0.0;
