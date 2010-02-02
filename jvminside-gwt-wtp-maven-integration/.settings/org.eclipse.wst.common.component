@@ -4,7 +4,7 @@
         <wb-resource deploy-path="/" source-path="/src/main/webapp"/>
         <wb-resource deploy-path="/" source-path="/target/gwt-web"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
-        <property name="context-root" value="gwtdemo"/>
         <property name="java-output-path"/>
+        <property name="context-root" value="gwtdemo"/>
     </wb-module>
 </project-modules>
