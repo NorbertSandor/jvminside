@@ -47,6 +47,7 @@
 					<webappDirectory>${project.build.directory}/gwt-web</webappDirectory>
 					<extra>${project.build.directory}/gwt-extra</extra>
 					<gen>${project.build.directory}/gwt-gen</gen>
+					<extraJvmArgs>-Xmx256m -Xss16m -noverify -javaagent:c:/Dev/jrebel/jrebel.jar</extraJvmArgs>
 				</configuration>
 				<executions>
 					<execution>
@@ -55,21 +56,21 @@
 							<goal>compile</goal>
 						</goals>
 						<phase>process-classes</phase>
-						<configuration>
-							<extraJvmArgs>-Xmx256m -Xss16m</extraJvmArgs>
-						</configuration>
+<!--						<configuration>-->
+<!--							<extraJvmArgs>-Xmx256m -Xss16m</extraJvmArgs>-->
+<!--						</configuration>-->
 					</execution>
-					<execution>
-						<id>gwt-run-or-debug</id>
-						<goals>
-							<goal>run</goal>
-							<goal>debug</goal>
-						</goals>
-						<configuration>
-							<extraJvmArgs>-Xmx256m -Xss16m -noverify
-								-javaagent:${AGENT_PATH_WIN}</extraJvmArgs>
-						</configuration>
-					</execution>
+<!--					<execution>-->
+<!--						<id>gwt-run-or-debug</id>-->
+<!--						<goals>-->
+<!--							<goal>run</goal>-->
+<!--							<goal>debug</goal>-->
+<!--						</goals>-->
+<!--						<configuration>-->
+<!--							<extraJvmArgs>-Xmx256m -Xss16m -noverify-->
+<!--								-javaagent:${AGENT_PATH_WIN}</extraJvmArgs>-->
+<!--						</configuration>-->
+<!--					</execution>-->
 				</executions>
 			</plugin>
 			<plugin>
