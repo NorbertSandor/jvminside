@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to="gwt">
+	<inherits name="com.google.gwt.user.User" />
+	<entry-point class="com.jvminside.blog.gwtapp.client.GwtApp" />
+	<source path="client" />
+</module>
